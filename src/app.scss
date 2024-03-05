@@ -1,16 +1,19 @@
-*{
+* {
     font-family: "Montserrat", sans-serif;
     margin: 0;
 }
-header{
-    margin:45px 100px 50px 100px;
+
+header {
+    margin: 45px 100px 50px 100px;
     display: flex;
     justify-content: space-between;
-    & > nav{
+
+    &>nav {
         display: flex;
         align-items: center;
         gap: 57px;
-        & > a{
+
+        &>a {
             text-decoration: none;
             color: black;
             font-weight: 500;
@@ -19,6 +22,7 @@ header{
     }
 
 }
+
 .banner::before {
     content: "";
     background-image: url('./assets/IMG.svg');
@@ -30,12 +34,14 @@ header{
     position: absolute;
     z-index: 0;
 }
+
 .banner {
     position: relative;
     margin: 0 100px;
     height: 223px;
     border-radius: 10px;
     overflow: hidden;
+
     &_content {
         position: relative;
         z-index: 1;
@@ -43,46 +49,53 @@ header{
         display: flex;
         justify-content: center;
         align-items: center;
+
         &_p {
             font-weight: 700;
             font-size: 48px;
             color: white;
-        }   
+        }
     }
 }
-.gallery{
+
+.gallery {
     border-radius: 10px;
     margin: 50px 100px;
     background-color: #f6f6f6;
-    &_container{
+
+    &_container {
         padding: 56px 50px;
     }
 }
-.card{
+
+.card {
     box-sizing: border-box;
     background: rgba(255, 96, 96, 1);
     border-radius: 10px;
 
-    &_list{
+    &_list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
         justify-items: center;
-        &_cover{
+
+        &_cover {
             width: 100%;
             height: 80%;
-            border-radius: 10px 10px 0 0 ;
-            &_title{
+            border-radius: 10px 10px 0 0;
+
+            &_title {
                 color: white;
                 padding: 0 1rem;
                 display: flex;
                 align-items: center;
                 padding: 2rem 2rem;
-            } 
+            }
         }
     }
 }
-.footer{
+
+.footer {
     background-color: black;
     height: 209px;
     display: flex;
@@ -90,17 +103,19 @@ header{
     justify-content: center;
     align-items: center;
     gap: 29px;
-    &>p{
+
+    &>p {
         color: white;
         font-weight: 500;
         font-size: 24px;
     }
 }
-.about_banner{
-    background-image: url('./assets/aboutBanner.svg'); 
+
+.about_banner {
+    background-image: url('./assets/aboutBanner.svg');
     background-size: cover;
     background-position: center;
-    height: 20rem;
+    height: 223px;
     margin: 50px 100px;
     border-radius: 10px;
 }
