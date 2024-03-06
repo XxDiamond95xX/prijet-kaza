@@ -1,85 +1,58 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import '../../App.css';
 
 function Info() {
-    const [isFiabilityVisible, setIsFiabilityVisible] = useState(false);
-    const [isRespectVisible, setIsRespectVisible] = useState(false);
-    const [isServiceVisible, setIsServiceVisible] = useState(false);
-    const [isSecurityVisible, setIsSecurityVisible] = useState(false);
+    const [infoSections, setInfoSections] = useState([
+        {
+            title: 'Fiabilité',
+            content: 'Les annonces postées sur kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
+            isVisible: false,
+            toggleVisibility: () => toggleVisibility(0),
+        },
+        {
+            title: 'Respect',
+            content: 'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
+            isVisible: false,
+            toggleVisibility: () => toggleVisibility(1),
+        },
+        {
+            title: 'Service',
+            content: 'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
+            isVisible: false,
+            toggleVisibility: () => toggleVisibility(2),
+        },
+        {
+            title: 'Sécurité',
+            content: 'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.',
+            isVisible: false,
+            toggleVisibility: () => toggleVisibility(3),
+        },
+    ]);
 
-    const toggleFiabilityVisibility = () => {
-        setIsFiabilityVisible(!isFiabilityVisible);
+    const toggleVisibility = (index) => {
+        const updatedSections = [...infoSections];
+        updatedSections[index].isVisible = !updatedSections[index].isVisible;
+        setInfoSections(updatedSections);
     };
 
-    const toggleRespectVisibility = () => {
-        setIsRespectVisible(!isRespectVisible);
-    };
-
-    const toggleServiceVisibility = () => {
-        setIsServiceVisible(!isServiceVisible);
-    };
-
-    const toggleSecurityVisibility = () => {
-        setIsSecurityVisible(!isSecurityVisible);
-    };
     return (
         <>
-            <div className="Info">
-                <div className="Info_title" onClick={toggleFiabilityVisibility}>
-                    Fiabilité
-                    <FontAwesomeIcon
-                        icon={faChevronUp}
-                        className={isFiabilityVisible ? 'rotate180' : 'rotate0'}
-                    />
+            {infoSections.map((section, index) => (
+                <div className="Info" key={index}>
+                    <div className="Info_title" onClick={section.toggleVisibility}>
+                        {section.title}
+                        <FontAwesomeIcon
+                            icon={faChevronUp}
+                            className={section.isVisible ? 'rotate180' : 'rotate0'}
+                        />
+                    </div>
+                    <div className={`Info_title_p ${section.isVisible ? 'visible' : 'hidden'}`}>
+                        {section.content}
+                    </div>
                 </div>
-                <div className={`Info_title_p ${isFiabilityVisible ? 'visible' : 'hidden'}`}>
-                    Les annonces postées sur kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et<br />
-                    toutes les informations sont réguliereement vérifiées par nos équipes.
-                </div>
-            </div>
-            <div className="Info">
-                <div className="Info_title" onClick={toggleRespectVisibility}>
-                    Respect
-                    <FontAwesomeIcon
-                        icon={faChevronUp}
-                        className={isRespectVisible ? 'rotate180' : 'rotate0'}
-                    />
-                </div>
-                <div className={`Info_title_p ${isRespectVisible ? 'visible' : 'hidden'}`}>
-                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de<br />
-                    perturbation du voisinage entraînera une exclusion de notre plateforme.
-                </div>
-            </div>
-            <div className="Info">
-                <div className="Info_title" onClick={toggleServiceVisibility}>
-                    Service
-                    <FontAwesomeIcon
-                        icon={faChevronUp}
-                        className={isServiceVisible ? 'rotate180' : 'rotate0'}
-                    />
-                </div>
-                <div className={`Info_title_p ${isServiceVisible ? 'visible' : 'hidden'}`}>
-                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de<br />
-                    perturbation du voisinage entraînera une exclusion de notre plateforme.
-                </div>
-            </div>
-            <div className="Info">
-                <div className="Info_title" onClick={toggleSecurityVisibility}>
-                    Sécurité
-                    <FontAwesomeIcon
-                        icon={faChevronUp}
-                        className={isSecurityVisible ? 'rotate180' : 'rotate0'}
-                    />
-                </div>
-                <div className={`Info_title_p ${isSecurityVisible ? 'visible' : 'hidden'}`}>
-                    La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement<br />
-                    correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au<br />
-                    locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons<br />
-                    également des ateliers sur la sécurité domestique pour nos hôtes.
-                </div>
-            </div>
+            ))}
         </>
     );
 }
