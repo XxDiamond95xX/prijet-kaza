@@ -8,11 +8,11 @@ function App() {
 
   return (
     <>
-    <Routes>
-      <Route path='/' element= {<Homepage />} />
-      <Route path='/about' element= {<About />} />
-      <Route path='/location/:id' element= {<Location />} />
-    </Routes>
+      <Routes>
+        <Route path='/' element={<Homepage />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/location/:id' element={<Location />} />
+      </Routes>
     </>
   )
 }

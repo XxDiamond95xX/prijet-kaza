@@ -2,9 +2,9 @@ import Info from "./Info";
 
 function InfoContainer() {
     return (
-        <div className="InfoContainer">
+        <section className="InfoContainer">
             <Info />
-        </div>
+        </section>
     );
 }
 

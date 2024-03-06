@@ -120,4 +120,38 @@ header {
     border-radius: 10px;
 }
 
+.InfoContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+
+.Info {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    margin: 20px;
+
+    &_title {
+        width: 100%;
+        background-color: rgba(255, 96, 96, 1);
+        color: #f6f6f6;
+        padding: 10px;
+        border-radius: 2.5px;
+        font-weight: bold;
+
+        &_p {
+            background-color: #f6f6f6;
+            padding: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.fa-solid {
+    color: white;
+}
+
 // @media (max-width:)
