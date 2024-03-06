@@ -126,7 +126,6 @@ header {
     margin: 2rem;
 }
 
-
 .Info {
     display: flex;
     flex-direction: column;
@@ -141,17 +140,39 @@ header {
         padding: 10px;
         border-radius: 2.5px;
         font-weight: bold;
+        display: flex;
+        justify-content: space-between;
 
         &_p {
             background-color: #f6f6f6;
             padding: 10px;
             width: 100%;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.2s ease-out, opacity 0.2s ease-out;
         }
     }
 }
 
-.fa-solid {
+.Info_title_p.visible {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.rotate180 {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate0 {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.fa-chevron-up {
     color: white;
+    cursor: pointer;
 }
 
 // @media (max-width:)
