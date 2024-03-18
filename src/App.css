@@ -89,6 +89,7 @@ a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   font-size: 1rem;
+  margin: 0 1rem 1rem;
 }
 
 .card-link {
@@ -222,7 +223,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20rem 1rem;
+  margin: 2rem 1rem;
+}
+.error > h2 {
+  color: rgb(255, 96, 96);
+  font-size: 200px;
+  margin: 61px;
+}
+.error p {
+  color: rgb(255, 96, 96);
+}
+.error a {
+  color: black;
+  margin: 5rem;
 }
 
 .slideshow-container {
@@ -363,6 +376,7 @@ a:hover {
   .card {
     max-height: 500px;
     min-height: 250px;
+    padding-bottom: 1rem;
   }
   .card_list {
     grid-template-columns: repeat(1, 1fr);
@@ -477,6 +491,16 @@ a:hover {
   }
   .bar {
     width: 100%;
+  }
+  .error > h2 {
+    font-size: 117px;
+  }
+  .error p {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  .error a {
+    margin: 5rem 0;
   }
   .footer > p {
     font-size: 1rem;
