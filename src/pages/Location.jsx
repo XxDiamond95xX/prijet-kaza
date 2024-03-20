@@ -1,8 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import locationData from "../location.json";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import InfoSection from "../components/locationPage/InfoSection";
 import Slideshow from "../components/locationPage/Slideshow";
 
@@ -17,20 +15,18 @@ function Location() {
         if (locationFilter.length === 0) {
             navigate('*')
         }
-    }, [locationFilter]);
+    }, [locationFilter, navigate]);
 
 
 
     return (
         <>
-            <Header />
             {location && (
                 <>
                     <Slideshow location={location} />
                     <InfoSection location={location} />
                 </>
             )}
-            <Footer />
         </>
     );
 }
