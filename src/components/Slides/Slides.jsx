@@ -1,5 +1,4 @@
 // Slides.jsx
-import React from 'react';
 
 const Slides = ({ pictures }) => {
     return (

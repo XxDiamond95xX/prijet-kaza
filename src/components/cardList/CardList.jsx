@@ -1,5 +1,6 @@
-import Card from './Card';
+import Card from '../card/Card';
 import locationData from '../../location.json'
+import './CardList.css'
 
 const CardList = () => {
   return (

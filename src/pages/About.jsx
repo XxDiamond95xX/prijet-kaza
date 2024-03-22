@@ -1,5 +1,5 @@
-import AboutBanner from "../components/about/AboutBanner";
-import InfoContainer from "../components/about/InfoContainer";
+import AboutBanner from "../components/aboutBanner/AboutBanner";
+import InfoContainer from "../components/infoContainer/InfoContainer";
 
 function About() {
 

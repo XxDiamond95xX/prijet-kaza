@@ -1,0 +1,53 @@
+.banner::before {
+  content: "";
+  background-image: url("/src/assets/IMG.svg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.5);
+  position: absolute;
+  z-index: 0;
+}
+
+.banner {
+  position: relative;
+  margin: 0 100px;
+  height: 223px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.banner_content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner_content_p {
+  font-weight: 700;
+  font-size: 48px;
+  color: white;
+}
+
+@media (max-width: 1340px) {
+
+  .banner_content_p {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .banner {
+    margin: 1rem;
+    height: 110px;
+  }
+
+  .banner_content_p {
+    font-size: 1.5rem;
+  }
+}

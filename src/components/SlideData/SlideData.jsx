@@ -1,6 +1,5 @@
 // SlideData.jsx
-import React from 'react';
-import Slides from './Slides';
+import Slides from '../Slides/Slides';
 import locationData from '../../location.json';
 
 const SlideData = () => {

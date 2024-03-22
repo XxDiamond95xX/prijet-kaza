@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faStar } from "@fortawesome/free-solid-svg-icons";
-import "../../App.css";
+import './InfoSection.css'
 
 
 

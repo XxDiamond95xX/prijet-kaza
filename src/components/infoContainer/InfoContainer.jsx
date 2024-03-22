@@ -1,4 +1,5 @@
-import Info from "./Info";
+import Info from "../info/Info";
+import './infoContainer.css'
 
 function InfoContainer() {
     return (

@@ -1,0 +1,11 @@
+.InfoContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  @media (max-width: 760px) {
+    .InfoContainer {
+        margin: 0;
+      }
+  }

@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import locationData from "../location.json";
-import InfoSection from "../components/locationPage/InfoSection";
-import Slideshow from "../components/locationPage/Slideshow";
+import InfoSection from "../components/InfoSection/InfoSection";
+import Slideshow from "../components/Slideshow/Slideshow";
 
 
 function Location() {

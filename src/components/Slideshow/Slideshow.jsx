@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../../App.css";
+import './Slideshow.css'
 
 function Slideshow({ location }) {
     const [currentSlide, setCurrentSlide] = useState(0);

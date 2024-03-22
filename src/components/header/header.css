@@ -1,0 +1,36 @@
+header {
+    margin: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+  header > nav {
+    display: flex;
+    align-items: center;
+    gap: 57px;
+  }
+  header > nav > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+@media (max-width: 760px) {
+    .Logo {
+      width: 130px;
+    }
+    header {
+      gap: 1rem;
+      margin: 2rem 1.2rem;
+    }
+    header > nav {
+      gap: 25px;
+    }
+    header > nav > a {
+      font-size: 1rem;
+    }
+}    
