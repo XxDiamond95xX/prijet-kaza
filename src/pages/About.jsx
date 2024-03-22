@@ -1,15 +1,16 @@
-import AboutBanner from "../components/aboutBanner/AboutBanner";
 import InfoContainer from "../components/infoContainer/InfoContainer";
+import Banner from "../components/banner/Banner";
+
 
 function About() {
-
+    const pageType = "about";
 
     return (
         <>
-            <AboutBanner />
+            <Banner pageType={pageType} />
             <InfoContainer />
         </>
-    )
+    );
 }
 
 export default About;
